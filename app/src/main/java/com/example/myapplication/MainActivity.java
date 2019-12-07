@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.io.InputStream;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -35,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
                 pwe = (EditText)findViewById(R.id.pwInput);
                 id = ide.getText().toString();
                 pw = pwe.getText().toString();
+                Intent intent2=new Intent(this,nav.class);
+                startActivity(intent2);
 
                 break;
             case R.id.RegistBtn:
