@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".registActivity"></activity>
+        <activity
+            android:name=".nav"
+            android:label="@string/title_activity_nav"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".registActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,8 +25,6 @@
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
             android:value="s0hr77o9yc" />
-
     </application>
-
 
 </manifest>
