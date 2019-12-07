@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class registActivity extends AppCompatActivity {
@@ -24,10 +26,18 @@ public class registActivity extends AppCompatActivity {
         UserDB.execSQL("create table if not exists "+tableName1+"("+"STUNUM VARCHAR, "+"NAME VARCHAR, "+"ID VARCHAR, "+"PASSWORD VARCHAR, "+"PRIMARY KEY (STUNUM))");
         UserDB.execSQL("create table if not exists "+tableName2+"( STUNUM VARCHAR, COURSE VARCHAR, COURSENUM VARCHAR, DAY VARCHAR, LOCATION VARCHAR, START VARCHAR, END VARCHAR)");
 
-        editTextNum;
-        editTextName;
-        editTextId;
-        editTextPw;
+        editTextNum=findViewById(R.id.edit_num);
+        editTextName=findViewById(R.id.edit_name);
+        editTextId=findViewById(R.id.edit_id);
+        editTextPw=findViewById(R.id.edit_pw);
+
+        Button save_button=findViewById(R.id.save_btn);
+        save_button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                insertRecord(editTextNum.getText().toString(),editTextName.getText().toString(),editTextId.getText().toString(),editTextPw.getText().toString());
+            }
+        });
 
     }
     private void insertRecord(String num,String name,String id,String pw){
