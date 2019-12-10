@@ -1,7 +1,9 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.myapplication.ModifyTable;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -85,6 +87,13 @@ public class nav extends AppCompatActivity {
                         fr = new map();
                         toolbar.setTitle("지도");
                         break;
+
+                    case R.id.modifytimetable:
+                        fr = new ModifyTable();
+                        toolbar.setTitle("시간표 수정");
+                        break;
+
+
 
                 }
                 fm = getSupportFragmentManager();

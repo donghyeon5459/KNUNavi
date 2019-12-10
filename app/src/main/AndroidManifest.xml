@@ -12,7 +12,7 @@
         <activity
             android:name=".nav"
             android:label="@string/title_activity_nav"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".registActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
