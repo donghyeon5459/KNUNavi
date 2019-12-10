@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TimePicker;
 
 import java.util.ArrayList;
 
@@ -28,9 +29,11 @@ public class ModifyTable extends Fragment {
     EditText edit_courseNum;
     Spinner edit_day;
     EditText edit_location;
-    Spinner edit_start;
-    Spinner edit_end;
+    TimePicker edit_start;
+    TimePicker edit_end;
     ArrayList<String> Day;
+    int startHr,startMin,endHr,endMin;
+    String startTime,endTime;
     public ModifyTable() {
         // Required empty public constructor
     }
@@ -52,11 +55,29 @@ public class ModifyTable extends Fragment {
         Day.add("수");
         Day.add("목");
         Day.add("금");
+        edit_start.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
+            @Override
+            public void onTimeChanged(TimePicker timePicker, int hour, int minute) {
+                startHr=hour;
+                startMin=minute;
+                startTime=startHr+":"+startMin;//시작시간 저장 문자열
+
+            }
+        });
+        edit_end.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
+            @Override
+            public void onTimeChanged(TimePicker timePicker, int hour, int minute) {
+                endHr=hour;
+                endMin=minute;
+                endTime=endHr+":"+endMin;//종료시간 저장 문자열
+            }
+        });
+
         Button save_button=view.findViewById(R.id.save);
         save_button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                insertTable(currentuser.Snum,edit_courseName.getText().toString(),edit_courseNum.getText().toString(),edit_day.toString(),edit_location.getText().toString(),edit_start.toString(),edit_end.toString());
+                insertTable(currentuser.Snum,edit_courseName.getText().toString(),edit_courseNum.getText().toString(),edit_day.toString(),edit_location.getText().toString(),startTime,endTime);
             }
         });
 
