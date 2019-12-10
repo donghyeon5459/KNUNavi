@@ -100,8 +100,8 @@ public class ModifyTable extends Fragment {
         save_button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                UserDB = SQLiteDatabase.openOrCreateDatabase("studentDb", )
-                UserDB = openOrCreateDatabase("studentDB",MODE_PRIVATE,null);
+                UserDB = SQLiteDatabase.openOrCreateDatabase("studentDB", )
+
 
 
                 insertTable(currentuser.Snum,edit_courseName.getText().toString(),edit_courseNum.getText().toString(),eday,edit_location.getText().toString(),startTime,endTime);
