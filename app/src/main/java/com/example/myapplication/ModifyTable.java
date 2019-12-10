@@ -27,6 +27,7 @@ public class ModifyTable extends Fragment {
 
     SQLiteDatabase UserDB;
     String tableName2="timetable";
+    String eday;
 
     EditText edit_courseName;
     EditText edit_courseNum;
@@ -36,7 +37,8 @@ public class ModifyTable extends Fragment {
     TimePicker edit_end;
     ArrayList<String> Day;
     ArrayAdapter arrayAdapter;
-
+    int startHr,startMin,endHr,endMin;
+    String startTime,endTime;
     public ModifyTable() {
         // Required empty public constructor
     }
@@ -45,6 +47,7 @@ public class ModifyTable extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View view=inflater.inflate(R.layout.fragment_modify_table, container, false);
         edit_courseName= view.findViewById(R.id.ecourse);
         edit_courseNum=view.findViewById(R.id.ecoursenum);
@@ -64,7 +67,9 @@ public class ModifyTable extends Fragment {
         edit_day.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                System.out.println(edit_day.toString());
+                //System.out.println("df");
+                eday = Day.get(i);
+
             }
 
 
@@ -74,11 +79,32 @@ public class ModifyTable extends Fragment {
             }
         });
 
+        edit_start.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
+            @Override
+            public void onTimeChanged(TimePicker timePicker, int hour, int minute) {
+                startHr=hour;
+                startMin=minute;
+                startTime=startHr+":"+startMin;//시작시간 저장 문자열
+
+            }
+        });
+        edit_end.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
+            @Override
+            public void onTimeChanged(TimePicker timePicker, int hour, int minute) {
+                endHr=hour;
+                endMin=minute;
+                endTime=endHr+":"+endMin;//종료시간 저장 문자열
+            }
+        });
         Button save_button=view.findViewById(R.id.save);
         save_button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                insertTable(currentuser.Snum,edit_courseName.getText().toString(),edit_courseNum.getText().toString(),edit_day.toString(),edit_location.getText().toString(),edit_start.toString(),edit_end.toString());
+                UserDB = SQLiteDatabase.openOrCreateDatabase("studentDb", )
+                UserDB = openOrCreateDatabase("studentDB",MODE_PRIVATE,null);
+
+
+                insertTable(currentuser.Snum,edit_courseName.getText().toString(),edit_courseNum.getText().toString(),eday,edit_location.getText().toString(),startTime,endTime);
             }
         });
 
@@ -93,6 +119,7 @@ public class ModifyTable extends Fragment {
         String var5="'"+location+"'";
         String var6="'"+start+"'";
         String var7="'"+end+"'";
+        System.out.println("insert into "+tableName2+"(STUNUM, COURSE, COURSENUM, DAY, LOCATION, START, END) "+"values "+"("+var1+","+var2+","+var3+","+var4+","+var5+","+var6+","+var7+")");
         UserDB.execSQL("insert into "+tableName2+"(STUNUM, COURSE, COURSENUM, DAY, LOCATION, START, END) "+"values "+"("+var1+","+var2+","+var3+","+var4+","+var5+","+var6+","+var7+")");
     }
 
