@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
                     String password=cursor.getString(1);
                     if(password.equals(pw)) {
                         stuNum=cursor.getString(2);
-                        System.out.println("여기보세요");
-                        System.out.println(stuNum);
+                        currentuser.Snum = stuNum;
+
                         Intent intent2 = new Intent(this, nav.class);
                         startActivity(intent2);
                     }
