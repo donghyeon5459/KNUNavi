@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.RegistBtn:
                 Intent intent=new Intent(this,registActivity.class);
                 startActivity(intent);
+                finish();
 
 
 
