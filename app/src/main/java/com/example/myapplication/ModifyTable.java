@@ -9,14 +9,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TimePicker;
 
-import java.sql.Time;
 import java.util.ArrayList;
 
 
@@ -32,11 +28,9 @@ public class ModifyTable extends Fragment {
     EditText edit_courseNum;
     Spinner edit_day;
     EditText edit_location;
-    TimePicker edit_start;
-    TimePicker edit_end;
+    Spinner edit_start;
+    Spinner edit_end;
     ArrayList<String> Day;
-    ArrayAdapter arrayAdapter;
-
     public ModifyTable() {
         // Required empty public constructor
     }
@@ -52,27 +46,12 @@ public class ModifyTable extends Fragment {
         edit_location=view.findViewById(R.id.elocation);
         edit_start=view.findViewById(R.id.estart);
         edit_end=view.findViewById(R.id.eend);
-        Day=new ArrayList<String>();
+        Day=new ArrayList<>();
         Day.add("월");
         Day.add("화");
         Day.add("수");
         Day.add("목");
         Day.add("금");
-
-        arrayAdapter = new ArrayAdapter<String>( getContext(), android.R.layout.simple_spinner_dropdown_item, Day);
-        edit_day.setAdapter(arrayAdapter);
-        edit_day.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                System.out.println(edit_day.toString());
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
-
         Button save_button=view.findViewById(R.id.save);
         save_button.setOnClickListener(new View.OnClickListener(){
             @Override
