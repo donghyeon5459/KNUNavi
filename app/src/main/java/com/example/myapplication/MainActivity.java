@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     String id;
     String pw;
     String table_name="user";
+    public static String stuNum;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
                 pw =pwe.getText().toString();
 
                 UserDB=openOrCreateDatabase("studentDB",MODE_PRIVATE,null);
-                Cursor cursor=UserDB.rawQuery("select ID, PASSWORD from "+table_name+" where ID = "+id,null);
-                System.out.println("여기보세요");
+                Cursor cursor=UserDB.rawQuery("select ID, PASSWORD, STUNUM from "+table_name+" where ID = "+id,null);
+
                // cursor.moveToNext();
                // System.out.println(cursor.getString(0)+cursor.getString(1));
                 record_num=cursor.getCount();
@@ -61,6 +62,9 @@ public class MainActivity extends AppCompatActivity {
                     cursor.moveToNext();
                     String password=cursor.getString(1);
                     if(password.equals(pw)) {
+                        stuNum=cursor.getString(2);
+                        System.out.println("여기보세요");
+                        System.out.println(stuNum);
                         Intent intent2 = new Intent(this, nav.class);
                         startActivity(intent2);
                     }
