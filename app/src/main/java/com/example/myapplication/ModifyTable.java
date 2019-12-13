@@ -25,7 +25,7 @@ import java.util.ArrayList;
  */
 public class ModifyTable extends Fragment {
 
-    SQLiteDatabase UserDB;
+    //SQLiteDatabase UserDB;
     String tableName2="timetable";
     String eday;
 
@@ -100,11 +100,11 @@ public class ModifyTable extends Fragment {
         save_button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                UserDB = SQLiteDatabase.openOrCreateDatabase("studentDB", )
 
+                System.out.println( edit_courseName.getText().toString() );
+                System.out.println( edit_courseNum.getText().toString() );
 
-
-                insertTable(currentuser.Snum,edit_courseName.getText().toString(),edit_courseNum.getText().toString(),eday,edit_location.getText().toString(),startTime,endTime);
+                insertTable(currentuser.Snum,    edit_courseName.getText().toString(),   edit_courseNum.getText().toString(),  eday,edit_location.getText().toString(),startTime,endTime);
             }
         });
 
@@ -120,7 +120,7 @@ public class ModifyTable extends Fragment {
         String var6="'"+start+"'";
         String var7="'"+end+"'";
         System.out.println("insert into "+tableName2+"(STUNUM, COURSE, COURSENUM, DAY, LOCATION, START, END) "+"values "+"("+var1+","+var2+","+var3+","+var4+","+var5+","+var6+","+var7+")");
-        UserDB.execSQL("insert into "+tableName2+"(STUNUM, COURSE, COURSENUM, DAY, LOCATION, START, END) "+"values "+"("+var1+","+var2+","+var3+","+var4+","+var5+","+var6+","+var7+")");
+        registActivity.UserDB.execSQL("insert into "+tableName2+"(STUNUM, COURSE, COURSENUM, DAY, LOCATION, START, END) "+"values "+"("+var1+","+var2+","+var3+","+var4+","+var5+","+var6+","+var7+")");
     }
 
 }

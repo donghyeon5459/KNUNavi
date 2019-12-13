@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class registActivity extends AppCompatActivity {
 
-    SQLiteDatabase UserDB;
+    public static SQLiteDatabase UserDB;
     EditText editTextNum;
     EditText editTextName;
     EditText editTextId;
@@ -25,6 +25,7 @@ public class registActivity extends AppCompatActivity {
         setContentView(R.layout.activity_regist);
 
         UserDB=openOrCreateDatabase("studentDB",MODE_PRIVATE,null);
+        //UserDB=openOrCreateDatabase("studentDB",);
         UserDB.execSQL("create table if not exists "+tableName1+"("+"STUNUM TEXT, "+"NAME TEXT, "+"ID TEXT, "+"PASSWORD TEXT, "+"PRIMARY KEY (STUNUM))");
         UserDB.execSQL("create table if not exists "+tableName2+"( STUNUM TEXT, COURSE TEXT, COURSENUM TEXT, DAY TEXT, LOCATION TEXT, START VARCHAR, END TEXT)");
 
