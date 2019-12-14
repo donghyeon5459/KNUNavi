@@ -41,56 +41,82 @@ public class TimeTable extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_time_table, container, false);
-        Cursor cursor=MainActivity.UserDB.rawQuery("select DAY, START, END from "+table_name+" where STUNUM = "+currentuser.Snum,null);
+        String stunum="'"+currentuser.Snum+"'";
+        Cursor cursor2=MainActivity.UserDB.rawQuery("select DAY, START, END, COURSE, LOCATION from "+table_name+" where STUNUM = "+stunum,null);
+        int cursornum=cursor2.getCount();
+        System.out.println("갯수 : "+cursornum);
         makeList();
-        makeTextviewList(view);
+       //makeTextviewList(view);
         String day;
         String start;
         String end;
-        while (cursor.moveToNext()) { //행 데이터 개수만큼 반복
-            day= cursor.getString(0) ; //현재 커서의 열 번호 데이터값을 반환//DAY
-            start= cursor.getString(1);
-            end=cursor.getString(2);
-            int stime=Integer.parseInt(start)/1000;
-            int etime=Integer.parseInt(end)/1000;
-            System.out.println("22222222222222222222222222222222222222222222222222222222222222"+stime+" "+etime);
-            switch(day){
-                case "월":
-                    for(int j=stime;j<etime;j++)
-                    {
-                        monList.get(j-9).setBackgroundColor(0xfff00000);
-                    }
-                    break;
-                case "화":
-                    for(int j=stime;j<etime;j++)
-                    {
-                        tueList.get(j-9).setBackgroundColor(0xfff00000);
-                    }
-                    break;
-                case "수":
-                    for(int j=stime;j<etime;j++)
-                    {
-                        wedList.get(j-9).setBackgroundColor(0xfff00000);
-                    }
-                    break;
-                case "목":
-                    for(int j=stime;j<etime;j++)
-                    {
-                        thuList.get(j-9).setBackgroundColor(0xfff00000);
-                    }
-                    break;
-                case "금":
-                    for(int j=stime;j<etime;j++)
-                    {
-                        friList.get(j-9).setBackgroundColor(0xfff00000);
-                    }
-                    break;
+        String course;
+        String location;
+        for (int j=0;j<50;j=j+5) {
+            System.out.println(list.get(j));
+            TextView view1 = view.findViewById(getResources().getIdentifier(list.get(j),"id","com.example.myapplication"));
+            monList.add(view1);
+            System.out.println(list.get(j+1));
+            TextView view2 = view.findViewById(getResources().getIdentifier(list.get(j+1),"id","com.example.myapplication"));
+            tueList.add(view2);
+            System.out.println(list.get(j+2));
+            TextView view3 = view.findViewById(getResources().getIdentifier(list.get(j+2),"id","com.example.myapplication"));
+            wedList.add(view3);
+            System.out.println(list.get(j+3));
+            TextView view4 = view.findViewById(getResources().getIdentifier(list.get(j+3),"id","com.example.myapplication"));
+            thuList.add(view4);
+            System.out.println(list.get(j+4));
+            TextView view5 = view.findViewById(getResources().getIdentifier(list.get(j+4),"id","com.example.myapplication"));
+            friList.add(view5);
+        }
+        if(cursornum!=0) {
+            for(int k=0;k<cursornum;k++) { //행 데이터 개수만큼 반복
+                cursor2.moveToNext();
+                day = cursor2.getString(0); //현재 커서의 열 번호 데이터값을 반환//DAY
+                start = cursor2.getString(1);
+                end = cursor2.getString(2);
+                course=cursor2.getString(3);
+                location=cursor2.getString(4);
+                System.out.println("22222222222222222222222222222222222222222222222222222222222222"+day + start + " " + end);
+                int stime = Integer.parseInt(start) / 100;
+                int etime = Integer.parseInt(end) / 100;
 
+                switch (day) {
+                    case "월":
+                        for (int j = stime; j < etime; j++) {
+                            monList.get(j - 9).setBackgroundColor(0xfff00000);
+                            monList.get(j-9).setText(course+"\n"+location);
+                        }
+                        break;
+                    case "화":
+                        for (int j = stime; j < etime; j++) {
+                            tueList.get(j - 9).setBackgroundColor(0xfff00000);
+                            tueList.get(j-9).setText(course+"\n"+location);
+                        }
+                        break;
+                    case "수":
+                        for (int j = stime; j < etime; j++) {
+                            System.out.println(j-9);
+                            wedList.get(j - 9).setBackgroundColor(0xfff00000);
+                            wedList.get(j-9).setText(course+"\n"+location);
+                        }
+                        break;
+                    case "목":
+                        for (int j = stime; j < etime; j++) {
+                            thuList.get(j - 9).setBackgroundColor(0xfff00000);
+                            thuList.get(j-9).setText(course+"\n"+location);
+                        }
+                        break;
+                    case "금":
+                        for (int j = stime; j < etime; j++) {
+                            friList.get(j - 9).setBackgroundColor(0xfff00000);
+                            friList.get(j-9).setText(course+"\n"+location);
+                        }
+                        break;
+
+                }
             }
         }
-
-
-
 
         return view;
     }
@@ -99,16 +125,16 @@ public class TimeTable extends Fragment {
 
         for(i=900;i<1900;i+=100){
             String num=Integer.toString(i);
-            list.add("R.id.mon"+num);
-            list.add("R.id.tue"+num);
-            list.add("R.id.wed"+num);
-            list.add("R.id.thu"+num);
-            list.add("R.id.fri"+num);
+            list.add("mon"+num);
+            list.add("tue"+num);
+            list.add("wed"+num);
+            list.add("thu"+num);
+            list.add("fri"+num);
         }
 
 
     }
-    private void makeTextviewList(View view){
+    /*private void makeTextviewList(View view){
         for (int j=0;j<50;j=j+5) {
             TextView view1 = view.findViewById(getResources().getIdentifier(list.get(j),"id","com.example.myapplication"));
             monList.add(view1);
@@ -122,6 +148,6 @@ public class TimeTable extends Fragment {
             friList.add(view5);
         }
 
-    }
+    }*/
 
 }

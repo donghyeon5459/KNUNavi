@@ -18,15 +18,19 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="1"
+                android:height="30dp"
+                android:width="50dp"
 
-                />
+            />
 
             <TextView
                 android:text="월"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="30dp"
+                android:width="50dp"/>
 
 
             <TextView
@@ -34,26 +38,34 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="30dp"
+                android:width="50dp"/>
             <TextView
                 android:text="수"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="30dp"
+                android:width="50dp"/>
 
             <TextView
                 android:text="목"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="30dp"
+                android:width="50dp"/>
             <TextView
                 android:text="금"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="30dp"
+                android:width="50dp"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -64,6 +76,8 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="1"
+                android:height="50dp"
+                android:width="50dp"
 
                 />
 
@@ -73,7 +87,9 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
 
 
             <TextView
@@ -82,14 +98,18 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
             <TextView
                 android:text=""
                 android:id="@+id/wed900"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
 
             <TextView
                 android:text=""
@@ -97,14 +117,18 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
             <TextView
                 android:text=""
                 android:id="@+id/fri900"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -114,7 +138,9 @@
 
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:height="50dp"
+                android:width="50dp"/>
 
             <TextView
                 android:text=""
@@ -122,7 +148,9 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
 
 
             <TextView
@@ -131,14 +159,18 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
             <TextView
                 android:text=""
                 android:id="@+id/wed1000"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
 
             <TextView
                 android:text=""
@@ -146,14 +178,18 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
             <TextView
                 android:text=""
                 android:id="@+id/fri1000"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -163,7 +199,9 @@
 
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:height="50dp"
+                android:width="50dp"/>
 
             <TextView
                 android:text=""
@@ -171,7 +209,9 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
 
 
             <TextView
@@ -180,14 +220,18 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
             <TextView
                 android:text=""
                 android:id="@+id/wed1100"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
 
             <TextView
                 android:text=""
@@ -195,14 +239,18 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
             <TextView
                 android:text=""
                 android:id="@+id/fri1100"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -212,7 +260,9 @@
 
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:height="50dp"
+                android:width="50dp"/>
 
             <TextView
                 android:text=""
@@ -220,7 +270,8 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"/>
 
 
             <TextView
@@ -229,14 +280,18 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
             <TextView
                 android:text=""
                 android:id="@+id/wed1200"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
 
             <TextView
                 android:text=""
@@ -244,14 +299,18 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
             <TextView
                 android:text=""
                 android:id="@+id/fri1200"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -261,7 +320,9 @@
 
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:height="50dp"
+                android:width="50dp"/>
 
             <TextView
                 android:text=""
@@ -269,7 +330,8 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:width="50dp"/>
 
 
             <TextView
@@ -278,14 +340,18 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
             <TextView
                 android:text=""
                 android:id="@+id/wed1300"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
 
             <TextView
                 android:text=""
@@ -293,14 +359,18 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
             <TextView
                 android:text=""
                 android:id="@+id/fri1300"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -310,7 +380,9 @@
 
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:height="50dp"
+                android:width="50dp"/>
 
             <TextView
                 android:text=""
@@ -318,7 +390,9 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
 
 
             <TextView
@@ -327,14 +401,18 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
             <TextView
                 android:text=""
                 android:id="@+id/wed1400"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
 
             <TextView
                 android:text=""
@@ -342,14 +420,18 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
             <TextView
                 android:text=""
                 android:id="@+id/fri1400"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -359,7 +441,9 @@
 
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:height="50dp"
+                android:width="50dp"/>
 
             <TextView
                 android:text=""
@@ -367,7 +451,9 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
 
 
             <TextView
@@ -376,14 +462,18 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
             <TextView
                 android:text=""
                 android:id="@+id/wed1500"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
 
             <TextView
                 android:text=""
@@ -391,14 +481,18 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
             <TextView
                 android:text=""
                 android:id="@+id/fri1500"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -408,7 +502,9 @@
 
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:height="50dp"
+                android:width="50dp"/>
 
             <TextView
                 android:text=""
@@ -416,7 +512,9 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
 
 
             <TextView
@@ -425,14 +523,18 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
             <TextView
                 android:text=""
                 android:id="@+id/wed1600"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
 
             <TextView
                 android:text=""
@@ -440,14 +542,18 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
             <TextView
                 android:text=""
                 android:id="@+id/fri1600"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -457,7 +563,9 @@
 
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:height="50dp"
+                android:width="50dp"/>
 
             <TextView
                 android:text=""
@@ -465,7 +573,9 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
 
 
             <TextView
@@ -474,14 +584,18 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
             <TextView
                 android:text=""
                 android:id="@+id/wed1700"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
 
             <TextView
                 android:text=""
@@ -489,14 +603,18 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
             <TextView
                 android:text=""
                 android:id="@+id/fri1700"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -506,7 +624,9 @@
 
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:height="50dp"
+                android:width="50dp"/>
 
             <TextView
                 android:text=""
@@ -514,7 +634,9 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
 
 
             <TextView
@@ -523,14 +645,18 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
             <TextView
                 android:text=""
                 android:id="@+id/wed1800"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
 
             <TextView
                 android:text=""
@@ -538,16 +664,20 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
             <TextView
                 android:text=""
                 android:id="@+id/fri1800"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="3"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:height="50dp"
+                android:width="50dp"/>
         </TableRow>
-    </TableLayout>
+</TableLayout>
 
 
 

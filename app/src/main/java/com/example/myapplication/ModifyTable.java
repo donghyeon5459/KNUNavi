@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
@@ -37,7 +38,7 @@ public class ModifyTable extends Fragment {
     TimePicker edit_end;
     ArrayList<String> Day;
     ArrayAdapter arrayAdapter;
-    int startHr,startMin,endHr,endMin;
+    String startHr,startMin,endHr,endMin;
     String startTime,endTime;
     public ModifyTable() {
         // Required empty public constructor
@@ -81,18 +82,18 @@ public class ModifyTable extends Fragment {
         edit_start.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
             @Override
             public void onTimeChanged(TimePicker timePicker, int hour, int minute) {
-                startHr=hour;
-                startMin=minute;
-                startTime=startHr+""+startMin;//시작시간 저장 문자열
+                startHr=String.format("%02d",hour);
+                startMin=String.format("%02d",minute);
+                startTime=startHr+startMin;//시작시간 저장 문자열
 
             }
         });
         edit_end.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
             @Override
             public void onTimeChanged(TimePicker timePicker, int hour, int minute) {
-                endHr=hour;
-                endMin=minute;
-                endTime=endHr+""+endMin;//종료시간 저장 문자열
+                endHr=String.format("%02d",hour);
+                endMin= String.format("%02d",minute);
+                endTime=endHr+endMin;//종료시간 저장 문자열
             }
         });
         Button save_button=view.findViewById(R.id.save);
@@ -102,7 +103,7 @@ public class ModifyTable extends Fragment {
 
                 System.out.println( edit_courseName.getText().toString() );
                 System.out.println( edit_courseNum.getText().toString() );
-
+                System.out.println(startTime+"       "+endTime);
                 insertTable(currentuser.Snum,    edit_courseName.getText().toString(),   edit_courseNum.getText().toString(),  eday,edit_location.getText().toString(),startTime,endTime);
             }
         });
