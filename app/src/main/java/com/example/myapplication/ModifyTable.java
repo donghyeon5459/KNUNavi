@@ -123,7 +123,7 @@ public class ModifyTable extends Fragment {
         String var6="'"+start+"'";
         String var7="'"+end+"'";
         System.out.println("insert into "+tableName2+"(STUNUM, COURSE, COURSENUM, DAY, LOCATION, START, END) "+"values "+"("+var1+","+var2+","+var3+","+var4+","+var5+","+var6+","+var7+")");
-        registActivity.UserDB.execSQL("insert into "+tableName2+"(STUNUM, COURSE, COURSENUM, DAY, LOCATION, START, END) "+"values "+"("+var1+","+var2+","+var3+","+var4+","+var5+","+var6+","+var7+")");
+        MainActivity.UserDB.execSQL("insert into "+tableName2+"(STUNUM, COURSE, COURSENUM, DAY, LOCATION, START, END) "+"values "+"("+var1+","+var2+","+var3+","+var4+","+var5+","+var6+","+var7+")");
     }
 
 }
