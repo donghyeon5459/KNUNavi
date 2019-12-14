@@ -1,7 +1,6 @@
 package com.example.myapplication;
 
 
-import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
@@ -29,15 +28,20 @@ public class ModifyTable extends Fragment {
     //SQLiteDatabase UserDB;
     String tableName2="timetable";
     String eday;
+    String elocoation;
 
     EditText edit_courseName;
     EditText edit_courseNum;
     Spinner edit_day;
-    EditText edit_location;
+    Spinner edit_location;
     TimePicker edit_start;
     TimePicker edit_end;
     ArrayList<String> Day;
+    ArrayList<String> Location;
+
     ArrayAdapter arrayAdapter;
+    ArrayAdapter arrayAdapter2;
+    //int startHr,startMin,endHr,endMin;
     String startHr,startMin,endHr,endMin;
     String startTime,endTime;
     public ModifyTable() {
@@ -51,18 +55,28 @@ public class ModifyTable extends Fragment {
         View view=inflater.inflate(R.layout.fragment_modify_table, container, false);
         edit_courseName= view.findViewById(R.id.ecourse);
         edit_courseNum=view.findViewById(R.id.ecoursenum);
+
         edit_day=view.findViewById(R.id.eday);
+
         edit_location=view.findViewById(R.id.elocation);
+
         edit_start=view.findViewById(R.id.estart);
         edit_end=view.findViewById(R.id.eend);
         Day=new ArrayList<String>();
+        Location = new ArrayList<String>();
+
         Day.add("월");
         Day.add("화");
         Day.add("수");
         Day.add("목");
         Day.add("금");
 
+        Location.add("IT4호관");
+        Location.add("IT융복합관");
+
         arrayAdapter = new ArrayAdapter<String>( getContext(), android.R.layout.simple_spinner_dropdown_item, Day);
+        arrayAdapter2 = new ArrayAdapter<String>( getContext(), android.R.layout.simple_spinner_dropdown_item, Location);
+
         edit_day.setAdapter(arrayAdapter);
         edit_day.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -75,6 +89,23 @@ public class ModifyTable extends Fragment {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
+                eday = "월";
+            }
+        });
+
+        edit_location.setAdapter(arrayAdapter2);
+        edit_location.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                //System.out.println("df");
+                elocoation = Location.get(i);
+
+            }
+
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                elocoation="IT4호관";
 
             }
         });
@@ -103,8 +134,9 @@ public class ModifyTable extends Fragment {
 
                 System.out.println( edit_courseName.getText().toString() );
                 System.out.println( edit_courseNum.getText().toString() );
+
                 System.out.println(startTime+"       "+endTime);
-                insertTable(currentuser.Snum,    edit_courseName.getText().toString(),   edit_courseNum.getText().toString(),  eday,edit_location.getText().toString(),startTime,endTime);
+                insertTable(currentuser.Snum,    edit_courseName.getText().toString(),   edit_courseNum.getText().toString(),  eday, elocoation, startTime, endTime);
             }
         });
 
