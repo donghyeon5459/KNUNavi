@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.Manifest;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -49,6 +50,7 @@ public class map extends FragmentActivity implements OnMapReadyCallback {
     int day;
     Calendar cal = Calendar.getInstance();
     String korDay;
+    String table_name;
 
 
     @Override
@@ -80,8 +82,11 @@ public class map extends FragmentActivity implements OnMapReadyCallback {
                 korDay = "토";
                 break;
         }
-
+        korDay = '"'+"월"+'"';
+        table_name="timetable";
         System.out.println(korDay);
+
+        Cursor cursor=MainActivity.UserDB.rawQuery("select * from "+table_name+" where STUNUM = "+  "'" +   currentuser.Snum   +"'"      +" AND DAY = "+korDay,null);
         //MainActivity.UserDB
         gp = new GpsTracker(this);
         mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map);
