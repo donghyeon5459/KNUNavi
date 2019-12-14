@@ -41,56 +41,54 @@ public class TimeTable extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_time_table, container, false);
-        Cursor cursor=MainActivity.UserDB.rawQuery("select DAY, START, END from "+table_name+" where STUNUM = "+currentuser.Snum,null);
+        String stunum="'"+currentuser.Snum+"'";
+        Cursor cursor=MainActivity.UserDB.rawQuery("select DAY, START, END from "+table_name+" where STUNUM = "+stunum,null);
+        int cursornum=cursor.getCount();
+        System.out.println("갯수 : "+cursornum);
         makeList();
         makeTextviewList(view);
         String day;
         String start;
         String end;
-        while (cursor.moveToNext()) { //행 데이터 개수만큼 반복
-            day= cursor.getString(0) ; //현재 커서의 열 번호 데이터값을 반환//DAY
-            start= cursor.getString(1);
-            end=cursor.getString(2);
-            int stime=Integer.parseInt(start)/1000;
-            int etime=Integer.parseInt(end)/1000;
-            System.out.println("22222222222222222222222222222222222222222222222222222222222222"+stime+" "+etime);
-            switch(day){
-                case "월":
-                    for(int j=stime;j<etime;j++)
-                    {
-                        monList.get(j-9).setBackgroundColor(0xfff00000);
-                    }
-                    break;
-                case "화":
-                    for(int j=stime;j<etime;j++)
-                    {
-                        tueList.get(j-9).setBackgroundColor(0xfff00000);
-                    }
-                    break;
-                case "수":
-                    for(int j=stime;j<etime;j++)
-                    {
-                        wedList.get(j-9).setBackgroundColor(0xfff00000);
-                    }
-                    break;
-                case "목":
-                    for(int j=stime;j<etime;j++)
-                    {
-                        thuList.get(j-9).setBackgroundColor(0xfff00000);
-                    }
-                    break;
-                case "금":
-                    for(int j=stime;j<etime;j++)
-                    {
-                        friList.get(j-9).setBackgroundColor(0xfff00000);
-                    }
-                    break;
+        if(cursornum!=0) {
+            while (cursor.moveToNext()) { //행 데이터 개수만큼 반복
+                day = cursor.getString(0); //현재 커서의 열 번호 데이터값을 반환//DAY
+                start = cursor.getString(1);
+                end = cursor.getString(2);
+                System.out.println("22222222222222222222222222222222222222222222222222222222222222" + start + " " + end);
+                int stime = Integer.parseInt(start) / 1000;
+                int etime = Integer.parseInt(end) / 1000;
 
+                switch (day) {
+                    case "월":
+                        for (int j = stime; j < etime; j++) {
+                            monList.get(j - 9).setBackgroundColor(0xfff00000);
+                        }
+                        break;
+                    case "화":
+                        for (int j = stime; j < etime; j++) {
+                            tueList.get(j - 9).setBackgroundColor(0xfff00000);
+                        }
+                        break;
+                    case "수":
+                        for (int j = stime; j < etime; j++) {
+                            wedList.get(j - 9).setBackgroundColor(0xfff00000);
+                        }
+                        break;
+                    case "목":
+                        for (int j = stime; j < etime; j++) {
+                            thuList.get(j - 9).setBackgroundColor(0xfff00000);
+                        }
+                        break;
+                    case "금":
+                        for (int j = stime; j < etime; j++) {
+                            friList.get(j - 9).setBackgroundColor(0xfff00000);
+                        }
+                        break;
+
+                }
             }
         }
-
-
-
 
         return view;
     }
