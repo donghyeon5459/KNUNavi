@@ -15,7 +15,7 @@ import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
 
-    SQLiteDatabase UserDB;
+    public static SQLiteDatabase UserDB;
     EditText ide;
     EditText pwe;
     Button bu;

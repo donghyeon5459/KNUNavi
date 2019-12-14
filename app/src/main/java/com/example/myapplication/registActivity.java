@@ -41,7 +41,6 @@ public class registActivity extends AppCompatActivity {
                 insertRecord(editTextNum.getText().toString(),editTextName.getText().toString(),editTextId.getText().toString(),editTextPw.getText().toString());
             }
         });
-
     }
     private void insertRecord(String num,String name,String id,String pw){
         String var1="'"+num+"'";

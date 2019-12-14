@@ -11,7 +11,7 @@
         android:id="@+id/save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="84dp"
         android:text="시간표 입력"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -20,17 +20,17 @@
     <EditText
         android:id="@+id/elocation"
         android:layout_width="150dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="156dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="150dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:text="elocation"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.613"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.007" />
+        app:layout_constraintVertical_bias="0.005" />
 
     <TextView
         android:id="@+id/textView2"
@@ -50,11 +50,12 @@
     <EditText
         android:id="@+id/ecourse"
         android:layout_width="150dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="112dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
         android:ems="10"
+        android:text="ecourse"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.643"
+        app:layout_constraintHorizontal_bias="0.613"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -78,15 +79,17 @@
     <EditText
         android:id="@+id/ecoursenum"
         android:layout_width="150dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="484dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="450dp"
         android:ems="10"
+        android:text="ecoursenum"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.64"
+        app:layout_constraintHorizontal_bias="0.613"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.935" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView3"
@@ -101,13 +104,13 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.005" />
+        app:layout_constraintVertical_bias="0.029" />
 
     <Spinner
         android:id="@+id/eday"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="272dp"
+        android:layout_marginTop="280dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.613"
         app:layout_constraintStart_toStartOf="parent"
@@ -132,8 +135,8 @@
         android:id="@+id/estart"
         android:layout_width="244dp"
         android:layout_height="124dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="336dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="320dp"
         android:timePickerMode="spinner"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -142,8 +145,8 @@
         android:id="@+id/eend"
         android:layout_width="244dp"
         android:layout_height="124dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="444dp"
         android:timePickerMode="spinner"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -152,8 +155,8 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="536dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="500dp"
         android:text="끝 시간"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -162,8 +165,8 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="404dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="368dp"
         android:text="시작 시간"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
