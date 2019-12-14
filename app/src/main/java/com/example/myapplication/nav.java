@@ -91,6 +91,11 @@ public class nav extends AppCompatActivity {
                         fr = new ModifyTable();
                         toolbar.setTitle("시간표 수정");
                         break;
+
+                    case R.id.timetable:
+                        fr = new TimeTable();
+                        toolbar.setTitle("시간표");
+                        break;
                 }
                 fm = getSupportFragmentManager();
                 ft = fm.beginTransaction();

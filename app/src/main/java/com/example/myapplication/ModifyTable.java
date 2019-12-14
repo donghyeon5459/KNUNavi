@@ -43,7 +43,6 @@ public class ModifyTable extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -84,7 +83,7 @@ public class ModifyTable extends Fragment {
             public void onTimeChanged(TimePicker timePicker, int hour, int minute) {
                 startHr=hour;
                 startMin=minute;
-                startTime=startHr+":"+startMin;//시작시간 저장 문자열
+                startTime=startHr+""+startMin;//시작시간 저장 문자열
 
             }
         });
@@ -93,7 +92,7 @@ public class ModifyTable extends Fragment {
             public void onTimeChanged(TimePicker timePicker, int hour, int minute) {
                 endHr=hour;
                 endMin=minute;
-                endTime=endHr+":"+endMin;//종료시간 저장 문자열
+                endTime=endHr+""+endMin;//종료시간 저장 문자열
             }
         });
         Button save_button=view.findViewById(R.id.save);
