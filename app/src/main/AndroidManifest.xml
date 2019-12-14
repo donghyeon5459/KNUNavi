@@ -14,6 +14,7 @@
             android:label="@string/title_activity_nav"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".registActivity" />
+        <activity android:name=".map"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
