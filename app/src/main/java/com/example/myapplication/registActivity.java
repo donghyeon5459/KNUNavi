@@ -39,6 +39,7 @@ public class registActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 insertRecord(editTextNum.getText().toString(),editTextName.getText().toString(),editTextId.getText().toString(),editTextPw.getText().toString());
+                finish();
             }
         });
     }
