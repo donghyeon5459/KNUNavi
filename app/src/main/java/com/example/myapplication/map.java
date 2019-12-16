@@ -118,7 +118,6 @@ public class map extends FragmentActivity implements OnMapReadyCallback {
 
         }
         int min = 9999;
-
         int temp;
         for(int i=0; i< cursor.getCount(); i++)
         {
