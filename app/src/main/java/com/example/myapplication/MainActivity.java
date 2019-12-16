@@ -71,10 +71,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-
-        final TextView textview_address = (TextView)findViewById(R.id.textview);
-        Button ShowLocationButton = (Button) findViewById(R.id.button);
-
     }
 
 

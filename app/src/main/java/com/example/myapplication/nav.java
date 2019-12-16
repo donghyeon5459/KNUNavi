@@ -50,14 +50,6 @@ public class nav extends AppCompatActivity {
 
 
         setSupportActionBar(toolbar);
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         drawer = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
@@ -95,6 +87,9 @@ public class nav extends AppCompatActivity {
                         fr = new TimeTable();
                         toolbar.setTitle("시간표");
                         break;
+                    case R.id.logout:
+                        Intent it=new Intent(getApplicationContext(),MainActivity.class);
+                        startActivity(it);
 
 
                 }

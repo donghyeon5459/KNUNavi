@@ -138,10 +138,9 @@ public class ModifyTable extends Fragment {
 
                 System.out.println(startTime+"       "+endTime);
                 insertTable(currentuser.Snum,    edit_courseName.getText().toString(),   edit_courseNum.getText().toString(),  eday, elocoation, startTime, endTime);
-                TimeTable tt=new TimeTable();
+                Fragment fr=new TimeTable();
                 FragmentManager manager=getActivity().getSupportFragmentManager();
-                manager.beginTransaction().remove(ModifyTable.this).commit();
-                manager.popBackStack();
+                manager.beginTransaction().replace(R.id.fra,fr). addToBackStack(null).commit();
             }
         });
 
