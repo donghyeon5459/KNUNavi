@@ -130,7 +130,6 @@ public class map extends FragmentActivity implements OnMapReadyCallback {
                 System.out.println("fgjkjvjkcjcjcjk");
                 System.out.println(hour);
                 System.out.println(temp);
-
                 min = temp;
                 minlocation =location.get(i);
             }
