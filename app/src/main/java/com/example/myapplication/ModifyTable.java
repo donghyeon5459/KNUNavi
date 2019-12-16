@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -137,6 +138,10 @@ public class ModifyTable extends Fragment {
 
                 System.out.println(startTime+"       "+endTime);
                 insertTable(currentuser.Snum,    edit_courseName.getText().toString(),   edit_courseNum.getText().toString(),  eday, elocoation, startTime, endTime);
+                TimeTable tt=new TimeTable();
+                FragmentManager manager=getActivity().getSupportFragmentManager();
+                manager.beginTransaction().remove(ModifyTable.this).commit();
+                manager.popBackStack();
             }
         });
 

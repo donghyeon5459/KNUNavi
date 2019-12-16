@@ -84,33 +84,33 @@ public class TimeTable extends Fragment {
                 switch (day) {
                     case "월":
                         for (int j = stime; j < etime; j++) {
-                            monList.get(j - 9).setBackgroundColor(0xfff00000);
-                            monList.get(j-9).setText(course+"\n"+location);
+                            monList.get(j - 9).setBackgroundColor(Color.rgb(255,193,158));
+                            monList.get(j-9).setText(course+"\n");
                         }
                         break;
                     case "화":
                         for (int j = stime; j < etime; j++) {
-                            tueList.get(j - 9).setBackgroundColor(0xfff00000);
-                            tueList.get(j-9).setText(course+"\n"+location);
+                            tueList.get(j - 9).setBackgroundColor(Color.rgb(209,178,255));
+                            tueList.get(j-9).setText(course+"\n");
                         }
                         break;
                     case "수":
                         for (int j = stime; j < etime; j++) {
                             System.out.println(j-9);
-                            wedList.get(j - 9).setBackgroundColor(0xfff00000);
-                            wedList.get(j-9).setText(course+"\n"+location);
+                            wedList.get(j - 9).setBackgroundColor(Color.rgb(228,247,186));
+                            wedList.get(j-9).setText(course+"\n");
                         }
                         break;
                     case "목":
                         for (int j = stime; j < etime; j++) {
-                            thuList.get(j - 9).setBackgroundColor(0xfff00000);
-                            thuList.get(j-9).setText(course+"\n"+location);
+                            thuList.get(j - 9).setBackgroundColor(Color.rgb(255,217,236));
+                            thuList.get(j-9).setText(course+"\n");
                         }
                         break;
                     case "금":
                         for (int j = stime; j < etime; j++) {
-                            friList.get(j - 9).setBackgroundColor(0xfff00000);
-                            friList.get(j-9).setText(course+"\n"+location);
+                            friList.get(j - 9).setBackgroundColor(Color.rgb(178,204,255));
+                            friList.get(j-9).setText(course+"\n");
                         }
                         break;
 
