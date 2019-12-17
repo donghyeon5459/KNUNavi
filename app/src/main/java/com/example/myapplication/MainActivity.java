@@ -277,25 +277,25 @@ public class MainActivity extends AppCompatActivity {
                 pwe = (EditText)findViewById(R.id.pwInput);
                 id = "'"+ide.getText().toString()+"'";
                 pw =pwe.getText().toString();
-
+                //Database 'studentDB' open 후 로그인을 시도하는 아이디에 대한 id와 password 정보를 'user' table로부터 불러옴
                 UserDB=openOrCreateDatabase("studentDB",MODE_PRIVATE,null);
                 Cursor cursor=UserDB.rawQuery("select ID, PASSWORD, STUNUM from "+table_name+" where ID = "+id,null);
 
                // cursor.moveToNext();
                // System.out.println(cursor.getString(0)+cursor.getString(1));
                 record_num=cursor.getCount();
-                if(record_num==0){//아이디가 존재하지 않는경우
+                if(record_num==0){//아이디가 존재하지 않는경우 alertdialogbuilder를 이용하여 회원정보가 없다는 알림창을 띄움
                     AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                     builder.setTitle("알림").setCancelable(false).setNegativeButton("확인",null);
                     builder.setMessage("회원정보가 존재하지 않습니다.");
                     AlertDialog alert=builder.create();
                     alert.show();
                 }
-                else{
+                else{//아이디가 존재한다면
                     cursor.moveToNext();
                     String password=cursor.getString(1);
-                    if(password.equals(pw)) {
-                        stuNum=cursor.getString(2);
+                    if(password.equals(pw)) { //비밀번호의 일치 여부를 판단 - 일치하는 경우
+                        stuNum=cursor.getString(2); //timetable 테이블에서 사용자에 대한 시간표 정보를 불러오기 위해 stuNum에 학번 저장
                         currentuser.Snum = stuNum;
                         //System.out.println(stuNum);
                         gpsTracker = new GpsTracker(MainActivity.this);
@@ -305,12 +305,12 @@ public class MainActivity extends AppCompatActivity {
 
                         String address = getCurrentAddress(latitude, longitude);
 
-                        Toast.makeText(MainActivity.this, "현재위치 \n위도 " + latitude + "\n경도 " + longitude, Toast.LENGTH_LONG).show();
-
+                        //Toast.makeText(MainActivity.this, "현재위치 \n위도 " + latitude + "\n경도 " + longitude, Toast.LENGTH_LONG).show();
+                        //intent를 생성하여 다음 액티비티로 전환
                         Intent intent2 = new Intent(this, nav.class);
                         startActivity(intent2);
                     }
-                    else{
+                    else{//일치하지 않는 경우 일치하지 않음에 대한 알림창 띄움.
                         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                         builder.setTitle("알림").setCancelable(false).setNegativeButton("확인",null);
                         builder.setMessage("비밀번호가 일치하지 않습니다.");
